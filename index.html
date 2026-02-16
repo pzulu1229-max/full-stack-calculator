@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zambia Revenue Authority</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header class="stm-header">
+            <div class="top-bar">
+                <div class="container">
+                    <img width="100" height="100" src="https://www.zra.org.zm/wp-content/uploads/2023/09/ZRA-logo-01.png" class="attachment-full size-full" alt="" style="width:120px" />
+                    <div class="top-links"> 
+                        <a>About Us</a>
+                        <a>Tax Payer Charter</a>
+                        <a>Tenders</a>
+                        <a>Careers</a>
+                        <a>Tutorials</a>
+                        <a>Contact Us</a>
+                    </div>
+                    <a href="#" class="login-btn disabled-link"><i class="fas fa-user"></i> LOGIN</a>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <div class="container">
+                    <ul class="menu">
+                        <li><a>HOME</a></li>
+                        <li><a>REGISTRATIONS</a></li>
+                        <li><a>BUSINESS</a></li>
+                        <li><a>CUSTOMS</a></li>
+                        <li><a>PUBLICATIONS</a></li>
+                        <li><a>STATISTICS</a></li>
+                        <li><a>TAX PORTAL</a></li>
+                        <li><a>TAX TOOLS</a></li>
+                          <li><a>SMART INVOICE</a></li>
+                            <li><a>TAX PAYER RELATIONS</a></li>
+                    </ul>
+                    <div class="search-icon"><i class="fas fa-search"></i></div>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main">
+            <div class="container">
+                <div class="calculator-wrapper">
+                    <div class="calculator-header">
+  <h1>Paye Calculator</h1>
+        </div>
+     
+            <div class="left-column">
+                <div class="input-row">
+                    <label><strong>Basic Pay</strong></label>
+                    <input type="number" id="basicPay" placeholder="Enter Salary" value="0">
+                </div>
+                <div class="input-row">
+                    <label><strong>Allowances</strong></label>
+                    <input type="number" id="allowances" placeholder="Enter allowances" value="0">
+                </div>
+<div class="result-row highlight">
+    <label>Gross/Taxable Pay</label>
+    <span id="grossPay">K 0.00</span>
+</div>
+  <div class="input-row statutory-row">
+    <div class="statutory-label">
+        <strong>Statutory</strong>
+        <strong>Contribution</strong>
+    </div>
+    <input type="number" id="statutory" placeholder="Enter allowances" value="0">
+</div>
+
+                <div class="result-row">
+                    <label>Napsa 5%</label>
+                    <span id="napsa">K 0.00</span>
+                </div>
+
+                <div class="result-row">
+                    <label>National Health Insurance</label>
+                    <span id="nhima">K 0.00</span>
+                </div>
+
+                <div class="result-row">
+                    <label><strong>Total Contributions</strong></label>
+                    <span id="totalContributions">K 0.00</span>
+                </div>
+
+                <div class="result-row">
+                    <label><strong>Total Tax Deductions</strong></label>
+                    <span id="totalTax">K 0.00</span>
+                </div>
+
+                <div class="result-row">
+                    <label><strong>Total Deductions</strong></label>
+                    <span id="totalDeductions">K 0.00</span>
+                </div> 
+
+                 <div class="result-row total">
+                     <label><strong>Net Salary</strong></label>
+                     <span id="netSalary">K 0.00</span> 
+                </div>
+            </div>
+          
+             <div style="text-align: center;"> 
+                <h5>PAYE TAX COMPUTATION BANDS 2026</h5>
+             </div> 
+
+        <div class="table-section">
+           
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tax Bands</th>
+                        <th>Chargeable Income</th>
+                        <th>Tax Rate</th>
+                        <th>Tax Due</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First K5,100.00 </td>
+                        <td id="chargeable1">0</td>
+                        <td>0%</td>
+                        <td id="taxDue1">0</td>
+                    </tr>
+                    <tr>
+                        <td>Next K4,100.00 </td>
+                        <td id="chargeable2">0</td>
+                        <td>20%</td>
+                        <td id="taxDue2">0</td>
+                    </tr>
+                    <tr>
+                        <td>Next K4,400.00 </td>
+                        <td id="chargeable3">0</td>
+                        <td>30%</td>
+                        <td id="taxDue3">0</td>
+                    </tr>
+                    <tr>
+                        <td>Above K13,600.00 </td>
+                        <td id="chargeable4">0</td>
+                        <td>37%</td>
+                        <td id="taxDue4">0</td>
+                    </tr>
+                </tbody>
+            </table>
+                            <div class="table-note">
+                                <small>Note: Gross pay shows the tax band category used to calculate your tax</small>
+                            </div>
+                            
+                            <div class="button-container">
+                                <button class="clear-btn" onclick="resetCalculator()">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-widgets">
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <p> Plot No 1704 Kalambo Road, Lusaka</p>
+                        <p> 4111</p>
+                        <p> advice@zra.org.zm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    © 2026 Zambia Revenue Authority. All rights reserved
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
